@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var textFieldData = ""
+    
     var body: some View {
         NavigationStack {
         VStack(spacing: 80)  {
@@ -20,6 +22,32 @@ struct ContentView: View {
                 Button("Save") {}
                     .buttonBorderShape(.capsule)
                     .buttonStyle(.borderedProminent)
+                
+                Group {
+                    TextField("Type your desired temperature here", text: $textFieldData)
+                        .font(.title)
+                        .padding(.horizontal)
+                }
+                
+                HStack {
+                    Text("History")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                HStack {
+                    Text("100F = 37.8C")
+                    Spacer()
+                }
+                HStack {
+                    Text("0F = -17.8C")
+                    Spacer()
+                }
+                                
+                HStack {
+                    Text("70F = 21.1C")
+                    Spacer()
+                }
             }
         }
     }
