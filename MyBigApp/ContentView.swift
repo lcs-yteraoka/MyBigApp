@@ -9,11 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 40)  {
+        NavigationStack {
+        VStack(spacing: 80)  {
             Text("Temperature Converter")
                 .font(.largeTitle)
-            Text("100F = 37.8C")
+                .fontWeight(.bold)
+            VStack(spacing: 40) {
+                Text("100F = 37.8C")
+                    .font(.largeTitle)
+                Button("Save") {}
+                    .buttonBorderShape(.capsule)
+                    .buttonStyle(.borderedProminent)
+            }
         }
+    }
+        .buttonStyle(.bordered)
+        .controlSize(.large)
+        .font(.title)
+        .tint(.blue)
         .padding()
     }
 }
