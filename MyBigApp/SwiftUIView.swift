@@ -62,6 +62,42 @@ struct SwiftUIView: View {
                         }
                     }
                 }
+                VStack(spacing: 10) {
+                    HStack {
+                        Text("Star Rating")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                    HStack{
+                        HStack {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                            Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                            Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                        }
+                        Spacer()
+                    }
+                    VStack(spacing: 10) {
+                        HStack {
+                            Text("Review")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        HStack {
+                            Text("A timeless epic with more relevance today than ever.")
+                                .font(.headline)
+                            Spacer()
+                        }
+                    }
+                }
             }
             .padding()
             .navigationTitle("1984")
