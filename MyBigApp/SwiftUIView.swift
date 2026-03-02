@@ -20,7 +20,47 @@ struct SwiftUIView: View {
                 HStack {
                     Rectangle()
                         .frame(width: 150, height: 200)
-                    
+                    VStack(spacing: 20) {
+                        VStack {
+                            HStack {
+                                Text("Genre")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                            HStack {
+                                Text("Science Fiction")
+                                    .font(.headline)
+                                Spacer()
+                            }
+                        }
+                        VStack {
+                            HStack {
+                                Text("Date Started")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                            HStack {
+                                Text("April 3, 2025")
+                                    .font(.headline)
+                                Spacer()
+                            }
+                        }
+                        VStack {
+                            HStack {
+                                Text("Date Finished")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                            HStack {
+                                Text("April 9, 2025")
+                                    .font(.headline)
+                                Spacer()
+                            }
+                        }
+                    }
                 }
             }
             .padding()
